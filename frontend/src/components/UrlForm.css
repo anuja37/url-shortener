@@ -1,0 +1,143 @@
+/* Main container for the form and image */
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px; /* Space between the form and image */
+  max-width: 1200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  padding: 20px;
+  height: 100%;
+}
+
+/* Responsive font sizes for headings */
+.main-container h1 {
+  font-size: 5px; /* Adjust as needed */
+}
+
+.url-shortener-container h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.url-shortener-container h1 {
+  font-size: 4rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* URL Shortener Form */
+.url-shortener-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.url-shortener-form input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.url-shortener-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.url-shortener-form button {
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.url-shortener-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.url-shortener-form button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Short URL Result */
+.short-url-result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.short-url-result a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.short-url-result a:hover {
+  text-decoration: underline;
+}
+
+/* Error Message */
+.error-message {
+  color: #ff4d4f;
+  margin-top: 10px;
+}
+
+/* Image Container */
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.image-container img {
+  max-height: 80vh; /* Adjust as needed */
+  width: auto;
+  border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* Stack vertically on smaller screens */
+    gap: 20px; /* Reduce gap between items */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .url-shortener-container h1 {
+    font-size: 2.5rem; /* Smaller font size for mobile */
+  }
+
+  .url-shortener-container h3 {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
+
+  .url-shortener-form input {
+    width: 100%; /* Full width input on mobile */
+  }
+
+  .url-shortener-form button {
+    width: 100%; /* Full width button on mobile */
+  }
+
+  .image-container img {
+    max-height: 50vh; /* Adjust image height for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .url-shortener-container h1 {
+    font-size: 2rem; /* Even smaller font size for very small screens */
+  }
+
+  .url-shortener-container h3 {
+    font-size: 1rem; /* Even smaller font size for very small screens */
+  }
+}

@@ -1,0 +1,120 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+}
+
+/* Logo */
+.navbar-logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(87, 87, 87);
+  text-decoration: none;
+}
+
+/* Navbar Links (Centered) */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-links a {
+  color: rgb(87, 87, 87);
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+  color: #007bff; /* Change color on hover */
+}
+
+/* Contact Button (Right) */
+.navbar-contact {
+  margin-left: auto; /* Push to the right */
+}
+
+.contact-btn {
+  background-color: #bdbaba;
+  color: #000000;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #7b7979;
+  color: #ffffff; /* Change text color on hover */
+}
+
+/* Toggle Button (Hidden by Default) */
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255); /* Match the color scheme */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff; /* Match navbar background */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for dropdown */
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links a {
+    color: rgb(87, 87, 87); /* Ensure links are visible */
+    padding: 10px 0; /* Add padding for better touch targets */
+  }
+
+  .navbar-contact {
+    display: none; /* Hide contact button on mobile */
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo a {
+    font-size: 1.5rem; /* Smaller logo for very small screens */
+  }
+
+  .navbar-links a {
+    font-size: 1rem; /* Smaller font size for links */
+  }
+
+  .toggle-icon {
+    font-size: 1.2rem; /* Smaller toggle icon */
+  }
+}
